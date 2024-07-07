@@ -1,3 +1,35 @@
-h1 {
-    color: blue;
+.builds {
+    border-radius: 10px;
+    max-height: calc(100vh - 275.5px);
+    display: flex;
+    justify-content: center;
 }
+
+    .build__item {
+        fill-opacity: 0;
+        stroke-opacity: 0;
+        stroke-width: 3px;
+        fill: #2AC139;
+        cursor: pointer;
+
+        &.sold {
+            fill-opacity: 0.5;
+            stroke-opacity: 0.5;
+            fill: #BF5041;
+            stroke-width: 5px;
+            stroke: var(--colorRed);
+
+            &:hover {
+                fill-opacity: 0.8;
+                stroke-opacity: 0.8;
+                stroke: var(--colorRed);
+                cursor: no-drop;
+            }
+        }
+
+        &:hover {
+            stroke: #1a5435;
+            fill-opacity: 0.6;
+            stroke-opacity: 2;
+        }
+    }

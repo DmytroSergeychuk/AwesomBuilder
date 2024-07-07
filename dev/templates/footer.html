@@ -1,6 +1,19 @@
 <footer>
-	Footer
+	<div class="information container">
+		<h2>Інформація про будинок</h2>
+		<ul class="information__list">
+			<li class="information__list__item"><b>Адреса:</b><i>вул. <span id="address">Перемоги 24</span></i></li>
+			<li class="information__list__item"><b>Закальна кількість квартир:</b><i id="flats">79</i></li>
+			<li class="information__list__item"><b>Вільних квартир:</b><i id="flats-free">79</i></li>
+			<li class="information__list__item"><b>Заброньовані квартири:</b><i id="flats-booking">79</i></li>
+			<li class="information__list__item"><b>Продані квартири:</b><i id="flats-sold">79</i></li>
+		</ul>
+	</div>
+@@include('modal.html')
+
 </footer>
 <script async src="assets/js/custom.js"></script>
+<script async src="assets/js/modal.js"></script>
 </body>
+
 </html>

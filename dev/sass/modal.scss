@@ -1,0 +1,116 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #12121263;
+    visibility: hidden;
+    align-content: center;
+    justify-content: center;
+    display: grid;
+    transition: 0.3s;
+    &.show {
+        visibility: visible;
+
+        .modal__body {
+            transform: translateY(0);
+        }
+    }
+
+    .modal__body {
+        padding: 40px;
+        background-color: var(--colorFont);
+        color: var(--colorBlack);
+        max-width: 550px;
+        width: 100%;
+        min-height: 300px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 15px;
+        border: 3px solid;
+        position: relative;
+
+
+
+        .modal__title {
+            font-size: 26px;
+            margin-bottom: 15px;
+        }
+
+        .modal__paragraph {
+            font-size: 18px;
+        }
+
+        .modal__btn-row {
+            margin-top: auto;
+
+            .modal__btn-row_item-1 {
+                padding: 15px 20px;
+                border-radius: 25px;
+                background-color: var(--colorYellow);
+                min-width: 100px;
+                font-size: 18px;
+
+                &:hover {
+                    background-color: var(--colorYellowHover);
+                }
+
+                &:active {
+                    box-shadow: 0px 0px 8px var(--colorBlack);
+                }
+            }
+
+            .modal__btn-row_close {
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                background-color: var(--colorYellow);
+                width: 28px;
+                height: 28px;
+                border-radius: 5px;
+                border: 2px solid var(--colorBlack);
+
+                &:after,
+                &:before {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    width: 22px;
+                    height: 2px;
+                    top: 12px;
+                    left: 2px;
+                    background-color: var(--colorBlack);
+                }
+
+                &:after {
+                    transform: rotate(45deg);
+                }
+
+                &:before {
+                    transform: rotate(135deg);
+                }
+
+                &:hover {
+                    background-color: var(--colorYellowHover);
+
+                    &:after {
+                        background-color: var(--colorBlack);
+                        transform: rotate(90deg);
+
+                    }
+
+                    &:before {
+                        background-color: var(--colorBlack);
+                        transform: rotate(180deg);
+                    }
+                }
+
+                &:active {
+                    box-shadow: 0px 0px 8px var(--colorBlack);
+                }
+
+            }
+        }
+    }
+}
